@@ -41,7 +41,7 @@ return [
 
         'mysql' => [
             'driver' => 'mysql',
-            'host' => env('DB_HOST', '127.0.0.1'),
+            'host' => env('DB_HOST', '127.0.0.1:55013'),
             'port' => env('DB_PORT', '55013'),
             'database' => env('DB_DATABASE', 'ica4'),
             'username' => env('DB_USERNAME', 'azure'),
