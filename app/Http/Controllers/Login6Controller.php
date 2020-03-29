@@ -15,7 +15,6 @@ class Login6Controller extends Controller
      public function index(Request $request)
     {
         MyLogger2::info("Entering Login6Controller.index()");
-        MyLogger2::debug("Debugging Login6Controller.index()");
             
         try
         {
