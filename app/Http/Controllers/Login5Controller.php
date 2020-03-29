@@ -55,9 +55,6 @@ class Login5Controller extends Controller
         {
             // Log exception
             MyLogger2::error("Exception: ", array("message" => $e2->getMessage()));
-             
-            echo $e2->getMessage();
-             die();
 
             // Display our Global Exception Handler page
             return view("systemException");
