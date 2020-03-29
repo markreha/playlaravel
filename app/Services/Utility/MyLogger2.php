@@ -16,7 +16,7 @@ class MyLogger2 implements ILogger
         if (self::$logger == null)
         {
             self::$logger = new Logger('playlaravel'); 
-            self::$logger->pushHandler(new LogglyHandler('b79d48aa-0105-4d8b-a5ee-4b9069eed8d3/tag/monolog', Logger::DEBUG));
+            self::$logger->pushHandler(new LogglyHandler('b79d48aa-0105-4d8b-a5ee-4b9069eed8d3/tag/cst323_logfile_heroku_upload_php', Logger::DEBUG));
             //self::$logger = new Logger('MyApp');
             //$stream = new StreamHandler('storage/logs/myapp.log', Logger::DEBUG);
             //$stream = new StreamHandler('b79d48aa-0105-4d8b-a5ee-4b9069eed8d3/tag/cst323_logfile_heroku_upload_php', Logger::DEBUG);
@@ -34,6 +34,10 @@ class MyLogger2 implements ILogger
 
     public static function info($message, $data=array())
     {
+        $log = new Logger('playlaravel');
+        $log->pushHandler(new LogglyHandler('b79d48aa-0105-4d8b-a5ee-4b9069eed8d3/tag/cst323_logfile_heroku_upload_php', Logger::INFO));
+        $log->addInfo('test logs to loggly');
+        
         //self::getLogger()->info($message, $data);
         self::getLogger()->addInfo($message, $data);
     }
