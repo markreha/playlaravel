@@ -21,7 +21,8 @@ class SecurityService
         $username = config("database.connections.mysql.username");
         $password = config("database.connections.mysql.password");
         $dbname = config("database.connections.mysql.database");
-
+echo "This is it " . $servername . " " . $username . " " . $password . " " . $dbname;
+die();        
         // BEST  PRACTICE: Do not create Database Connections in a DAO (so you can support Atomic Database Transactions)
         // Create connection
         $db= new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
