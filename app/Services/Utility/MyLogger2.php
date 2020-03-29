@@ -36,8 +36,6 @@ class MyLogger2 implements ILogger
     {
         //self::getLogger()->info($message, $data);
         self::getLogger()->addInfo($message, $data);
-        echo "I am here in info()";
-        die();
     }
 
     public static function warning($message, $data=array())
