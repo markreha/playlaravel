@@ -34,9 +34,9 @@ class MyLogger2 implements ILogger
 
     public static function info($message, $data=array())
     {
-        $log = new Logger('playlaravel');
-        $log->pushHandler(new LogglyHandler('b79d48aa-0105-4d8b-a5ee-4b9069eed8d3/tag/cst323_logfile_heroku_upload_php', Logger::INFO));
-        $log->addInfo('test logs to loggly');
+//        $log = new Logger('playlaravel');
+//        $log->pushHandler(new LogglyHandler('b79d48aa-0105-4d8b-a5ee-4b9069eed8d3/tag/cst323_logfile_heroku_upload_php', Logger::INFO));
+//        $log->addInfo('test logs to loggly');
         
         //self::getLogger()->info($message, $data);
         self::getLogger()->addInfo($message, $data);
