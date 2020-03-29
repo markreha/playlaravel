@@ -5,7 +5,7 @@ namespace App\Services\Utility;
 use Monolog\Logger;
 //use Monolog\Handler\StreamHandler;
 use Monolog\Handler\LogglyHandler;
-use Monolog\Formatter\LineFormatter;
+//use Monolog\Formatter\LineFormatter;
 
 class MyLogger2 implements ILogger
 {
@@ -28,21 +28,25 @@ class MyLogger2 implements ILogger
 
     public static function debug($message, $data=array())
     {
-        self::getLogger()->debug($message, $data);
+        //self::getLogger()->debug($message, $data);
+        self::getLogger()->addDebug($message, $data);
     }
 
     public static function info($message, $data=array())
     {
-        self::getLogger()->info($message, $data);
+        //self::getLogger()->info($message, $data);
+        self::getLogger()->addInfo($message, $data);
     }
 
     public static function warning($message, $data=array())
     {
-        self::getLogger()->warning($message, $data);
+        //self::getLogger()->warning($message, $data);
+        self::getLogger()->addWarning($message, $data);
     }
 
     public static function error($message, $data=array())
     {
-        self::getLogger()->error($message, $data);
+        //self::getLogger()->error($message, $data);
+        self::getLogger()->addError($message, $data);
     }
 }
