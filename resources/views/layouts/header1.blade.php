@@ -6,7 +6,7 @@
                     <ul class="nav navbar-nav mr-auto">
                         <li class="nav-item" role="presentation"><a class="nav-link disabled" href="http://www.gcu.edu" target="_blank">GCU</a></li>
                         <li class="nav-item" role="presentation"><a class="nav-link" href="#">Second Item</a></li>
-                    </ul><span class="navbar-text actions"> <a href="login5" class="login">Log In</a><a class="btn btn-light action-button" role="button" href="/playlaravel2">Log Off</a></span></div>
+                    </ul><span class="navbar-text actions"> <a href="login6" class="login">Log In</a><a class="btn btn-light action-button" role="button" href="/playlaravel2">Log Off</a></span></div>
     </div>
     </nav>
     </div>
