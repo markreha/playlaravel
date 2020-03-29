@@ -28,7 +28,7 @@ class SecurityDAO
             // Select username and password and see if this row exists
             $name = $user->getUsername();
             $pw = $user->getPassword();
-            $stmt = $this->db->prepare('SELECT ID, USERNAME, PASSWORD FROM users WHERE USERNAME = :username AND PASSWORD = :password');
+            $stmt = $this->db->prepare('SELECT ID, USERNAME, PASSWORD FROM USERS WHERE USERNAME = :username AND PASSWORD = :password');
             $stmt->bindParam(':username', $name);
             $stmt->bindParam(':password', $pw);
             $stmt->execute();
@@ -59,7 +59,7 @@ class SecurityDAO
         try
         {
             // Select by User ID
-            $stmt = $this->db->prepare('SELECT ID, USERNAME, PASSWORD FROM users WHERE ID = :id');
+            $stmt = $this->db->prepare('SELECT ID, USERNAME, PASSWORD FROM USERS WHERE ID = :id');
             $stmt->bindParam(':id', $id);
             $stmt->execute();
 
@@ -88,7 +88,7 @@ class SecurityDAO
         try
         {
             // Select all users
-            $stmt = $this->db->prepare('SELECT ID, USERNAME, PASSWORD FROM users');
+            $stmt = $this->db->prepare('SELECT ID, USERNAME, PASSWORD FROM USERS');
             $stmt->execute();
 
             // Return an array of UserModels
