@@ -16,7 +16,7 @@ class MyLogger2 implements ILogger
         {
             self::$logger = new Logger('MyApp');
             //$stream = new StreamHandler('storage/logs/myapp.log', Logger::DEBUG);
-            $stream = new StreamHandler('b79d48aa-0105-4d8b-a5ee-4b9069eed8d3/tag/cst323_logfile_heroku_upload_php', Logger::INFO);
+            $stream = new StreamHandler('b79d48aa-0105-4d8b-a5ee-4b9069eed8d3/tag/cst323_logfile_heroku_upload_php', Logger::DEBUG);
             $stream->setFormatter(new LineFormatter("%datetime% : %level_name% : %message% %context%\n", "g:iA n/j/Y"));
             self::$logger->pushHandler($stream);
         }
