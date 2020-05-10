@@ -1,5 +1,6 @@
 # A simple PHP Laravel application that can be used for testing in various Cloud Platforms like Azure and Heroku. See the following directions for deploying a PHP or PHP Laravel application to Azure, AWS, Heroku, and Google Cloud.
 
+## Deployment to Cloud Platforms Instructions
 ## Azure
 1. Log into the Azure Portal. 
 2. Click the '+ Create a resource' icon from the Azure Portal.
